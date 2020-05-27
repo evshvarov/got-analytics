@@ -83,6 +83,13 @@ ClassMethod Import(pSelectMode As %Library.Integer = {$zu(115,5)}, pFileName As 
 	quit tCounter
 }
 
+ClassMethod GrantSQLAccess() As %Status
+{
+     &sql(GRANT SELECT,UPDATE ON GOT.Deaths,GOT_BI_GOTDeaths.Listing TO UnknownUser)
+	 if SQLCODE < 0 throw ##class(%Exception.SQL).CreateFromSQLCODE(st.%SQLCODE,st.%Message)
+     q $$$OK
+}
+
 Parameter ROWTYPE = "name VARCHAR(250),allegiance VARCHAR(250),season INTEGER,episode INTEGER,location VARCHAR(250),killer VARCHAR(250),killers_house VARCHAR(250),method VARCHAR(250),death_no INTEGER";
 
 Storage Default

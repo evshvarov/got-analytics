@@ -29,13 +29,14 @@ RUN \
   set rc=##class(GOT.Deaths).ImportData("/opt/irisapp/import/game_of_thrones_deaths_collecti.csv") \
   write !,"Imported "_rc_" records" \
   do ##class(%DeepSee.Utils).%BuildCube("GOTDeaths") \
+  do ##class(GOT.Deaths).GrantSQLAccess() \
   zn "%SYS" \
   write "Modify MDX2JSON application security...",! \
   set webName = "/mdx2json" \
   set webProperties("AutheEnabled") = 64 \
   set webProperties("MatchRoles")=":%DB_IRISAPP" \
   set sc = ##class(Security.Applications).Modify(webName, .webProperties) \
-  if sc<1 write $SYSTEM.OBJ.DisplayError(sc) 
+  if sc<1 write $SYSTEM.OBJ.DisplayError(sc) \
 
 # bringing the standard shell back
 SHELL ["/bin/bash", "-c"]
