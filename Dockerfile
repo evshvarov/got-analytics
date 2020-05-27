@@ -39,3 +39,4 @@ RUN \
 
 # bringing the standard shell back
 SHELL ["/bin/bash", "-c"]
+COPY /dsw/irisapp.json /usr/irissys/csp/dsw/configs/
