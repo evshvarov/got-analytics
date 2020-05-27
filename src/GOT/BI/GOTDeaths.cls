@@ -32,7 +32,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="season" disabled="false" hasAll="false" allCaption="All season" allDisplayName="season" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="season" disabled="false" sourceProperty="season" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="6">
+      <level name="season" disabled="false" sourceExpression="&quot;S&quot;_%source.season" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="6">
       </level>
     </hierarchy>
   </dimension>
