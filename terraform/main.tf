@@ -49,7 +49,7 @@ terraform {
 }
 
 provider "google" {
-  project     = "zpm-package-manager"
+  project     = "iris-community-demos"
   region      = "europe-west1"
 }
 
