@@ -6,8 +6,14 @@
   </rowAxisOptions>
   <columnAxisOptions spec="" key="" value="" text="" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
   </columnAxisOptions>
+  <columnLevel spec="[Measures].[%COUNT]" key="" value="" text="Count" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="Total Deaths" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
+  </columnLevel>
+  <columnLevel spec="[method].[H1].[method].Members" key="" value="" text="method" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="true" aggFunction="COUNT NONEMPTY" aggFunctionParm="" levelCaption="Weapons" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
+  </columnLevel>
+  <columnLevel spec="[killer1].[H1].[killer].Members" key="" value="" text="killer1" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="true" aggFunction="COUNT" aggFunctionParm="" levelCaption="Heroes" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
+  </columnLevel>
+  <columnLevel spec="[killershouse].[H1].[killershouse].Members" key="" value="" text="killershouse" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="true" aggFunction="COUNT NONEMPTY" aggFunctionParm="" levelCaption="Houses and Clans" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
+  </columnLevel>
   <sqlRestriction></sqlRestriction>
-  <measure spec="[Measures].[%COUNT]" key="" value="" text="Count" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="Total Deaths" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
-  </measure>
 </pivot>
 </Document></Export>

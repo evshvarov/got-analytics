@@ -1,4 +1,4 @@
-Class GOT.Deaths Extends %Library.Persistent [ Not Abstract, DdlAllowed, Not LegacyInstanceContext, ProcedureBlock ]
+Class shvarov.GOT.Deaths Extends %Library.Persistent [ Not Abstract, DdlAllowed, Not LegacyInstanceContext, ProcedureBlock ]
 {
 
 Property name As %Library.String(MAXLEN = 250) [ SqlColumnNumber = 2 ];
@@ -85,8 +85,8 @@ ClassMethod Import(pSelectMode As %Library.Integer = {$zu(115,5)}, pFileName As 
 
 ClassMethod GrantSQLAccess() As %Status
 {
-     &sql(GRANT SELECT,UPDATE ON GOT.Deaths,GOT_BI_GOTDeaths.Listing TO UnknownUser)
-	 if SQLCODE < 0 throw ##class(%Exception.SQL).CreateFromSQLCODE(st.%SQLCODE,st.%Message)
+     &sql(GRANT SELECT,UPDATE ON shvarov_GOT.Deaths,shvarov_GOT_BI_GOTDeaths.Listing TO UnknownUser)
+	 if SQLCODE < 0 throw ##class(%Exception.SQL).CreateFromSQLCODE(%SQLCODE,"Grant roles")
      q $$$OK
 }
 
@@ -126,11 +126,11 @@ Storage Default
 <Value>deathno</Value>
 </Value>
 </Data>
-<DataLocation>^GOT.DeathsD</DataLocation>
+<DataLocation>^shvarov.GOT.DeathsD</DataLocation>
 <DefaultData>DeathsDefaultData</DefaultData>
-<IdLocation>^GOT.DeathsD</IdLocation>
-<IndexLocation>^GOT.DeathsI</IndexLocation>
-<StreamLocation>^GOT.DeathsS</StreamLocation>
+<IdLocation>^shvarov.GOT.DeathsD</IdLocation>
+<IndexLocation>^shvarov.GOT.DeathsI</IndexLocation>
+<StreamLocation>^shvarov.GOT.DeathsS</StreamLocation>
 <Type>%Storage.Persistent</Type>
 }
 

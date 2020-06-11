@@ -26,10 +26,10 @@ RUN \
   do ##class(dev.code).workdir("/irisdev/app/src") \
   do EnableDeepSee^%SYS.cspServer("/csp/irisapp/") \
   zpm "install dsw" \
-  set rc=##class(GOT.Deaths).ImportData("/opt/irisapp/import/game_of_thrones_deaths_collecti.csv") \
+  set rc=##class(shvarov.GOT.Deaths).ImportData("/opt/irisapp/import/game_of_thrones_deaths_collecti.csv") \
   write !,"Imported "_rc_" records" \
   do ##class(%DeepSee.Utils).%BuildCube("GOTDeaths") \
-  do ##class(GOT.Deaths).GrantSQLAccess() \
+  do ##class(shvarov.GOT.Deaths).GrantSQLAccess() \
   zn "%SYS" \
   write "Modify MDX2JSON application security...",! \
   set webName = "/mdx2json" \

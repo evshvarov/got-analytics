@@ -1,11 +1,11 @@
 /// 
-Class GOT.BI.GOTDeaths Extends %DeepSee.CubeDefinition [ DependsOn = GOT.Deaths, ProcedureBlock ]
+Class shvarov.GOT.BI.GOTDeaths Extends %DeepSee.CubeDefinition [ DependsOn = shvarov.GOT.Deaths, ProcedureBlock ]
 {
 
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="GOTDeaths" displayName="GOTDeaths" disabled="false" abstract="false" sourceClass="GOT.Deaths" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="GOTDeaths" displayName="GOTDeaths" disabled="false" abstract="false" sourceClass="shvarov.GOT.Deaths" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="killershouse" disabled="false" hasAll="false" allCaption="All killershouse" allDisplayName="killershouse" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="killershouse" disabled="false" sourceProperty="killershouse" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
