@@ -2,7 +2,7 @@
 This is an example of IRIS Analytics dashboard which is made against the [CSV file](https://github.com/evshvarov/got-analytics/blob/master/data/game_of_thrones_deaths_collecti.csv) on causalities of The Game Of Thrones taken from [Data World project](https://data.world/datasaurusrex/game-of-thones-deaths)
 
 [The dashboard can be examined here.](http://35.205.133.201:52773/dsw/index.html#!/d/Overview.dashboard?ns=IRISAPP)
-![Dashboard](http://35.205.133.201:52773/dsw/index.html#!/d/Overview.dashboard?ns=IRISAPP)
+![Dashboard](https://user-images.githubusercontent.com/2781759/84485495-e6803f80-aca4-11ea-9b93-769aab44fcac.png)
 
 ## What this example is about?
 It's a demo how you can:
