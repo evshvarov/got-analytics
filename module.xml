@@ -14,6 +14,7 @@
       <Parameter Name="folder" Value="user" />
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="shvarov.GOT.PKG"/>
+      <Resource Name="shvarov.csvtest.CLS"/>
       <Resource Name="*.DFI" />
       <FileCopy Name="dsw/irisapp.json" Target="${cspdir}dsw/configs/${folder}.json"/>
     </Module>
