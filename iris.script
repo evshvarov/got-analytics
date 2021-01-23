@@ -1,0 +1,24 @@
+
+zn "USER"
+;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+;zpm "install dsw"
+zpm "install isc-dev" 
+do ##class(dev.code).workdir("/irisrun/repo/src")
+do EnableDeepSee^%SYS.cspServer("/csp/user/")
+zpm "load /opt/irisbuild/ -v"
+set rc=##class(shvarov.GOT.Deaths).ImportData("/opt/irisbuild/data/game_of_thrones_deaths_collecti.csv")
+do ##class(%DeepSee.Utils).%BuildCube("GOTDeaths")
+do ##class(shvarov.GOT.Deaths).GrantSQLAccess()
+
+
+
+zn "%SYS" 
+w ##class(Security.Users).UnExpireUserPasswords("*")
+write "Modifying MDX2JSON application security...",! 
+set webName = "/mdx2json" 
+set webProperties("AutheEnabled") = 64 
+set webProperties("MatchRoles")=":%DB_USER" 
+set sc = ##class(Security.Applications).Modify(webName, .webProperties) 
+if sc<1 write $SYSTEM.OBJ.DisplayError(sc) 
+
+halt
