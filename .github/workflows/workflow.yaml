@@ -3,7 +3,7 @@ name: Build got-analytics image, deploy it to GCR. Run GKE. Run got-analytics in
 on:
   push:
     branches:
-      - master
+      - wait
     
 
 # Environment variables.
