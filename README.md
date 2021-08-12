@@ -56,3 +56,5 @@ Feel free to delete PackageSample folder and place your ObjectScript classes in 
 
 The script in Installer.cls will import everything you place under /src into IRIS.
 
+DSW version 3.1.21
+
