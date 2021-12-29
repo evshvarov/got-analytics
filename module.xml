@@ -17,6 +17,16 @@
       <Resource Name="shvarov.csvtest.CLS"/>
       <Resource Name="*.DFI" />
       <FileCopy Name="dsw/irisapp.json" Target="${cspdir}dsw/configs/${folder}.json"/>
+      <FileCopy Name="data/game_of_thrones_deaths_collecti.csv" Target="${mgrdir}data/game_of_thrones_deaths_collecti.csv"/>
+      <Invokes>
+        <Invoke Class="shvarov.GOT.Deaths" Method="ImportData">
+          <Arg>${mgrdir}data/game_of_thrones_deaths_collecti.csv</Arg>
+        </Invoke>
+        <Invoke Class="%DeepSee.Utils" Method="%BuildCube">
+          <Arg>GOTDeaths</Arg>
+        </Invoke>
+        <Invoke Class="shvarov.GOT.Deaths" Method="GrantSQLAccess"></Invoke>
+      </Invokes>
     </Module>
   </Document>
 </Export>
