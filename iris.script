@@ -2,23 +2,25 @@
     zn "USER"
     ;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
     ;zpm "install dsw"
-    zpm "install isc-dev" 
-    do ##class(dev.code).workdir("/irisrun/repo/src")
+    zpm "install isc-dev"
+    do ##class(dev.code).workdir("/home/irisowner/irisdev/src")
     do EnableDeepSee^%SYS.cspServer("/csp/user/")
-    zpm "load /opt/irisbuild/ -v"
+    zpm "load /home/irisowner/irisdev/ -v"
     ;set rc=##class(shvarov.GOT.Deaths).ImportData("/opt/irisbuild/data/game_of_thrones_deaths_collecti.csv")
     ;do ##class(%DeepSee.Utils).%BuildCube("GOTDeaths")
     ;do ##class(shvarov.GOT.Deaths).GrantSQLAccess()
 
+    zpm "install git-source-control"
+    do ##class(%Studio.SourceControl.Interface).SourceControlClassSet("SourceControl.Git.Extension")
 
 
-    zn "%SYS" 
+    zn "%SYS"
     w ##class(Security.Users).UnExpireUserPasswords("*")
-    write "Modifying MDX2JSON application security...",! 
-    set webName = "/mdx2json" 
-    set webProperties("AutheEnabled") = 64 
-    set webProperties("MatchRoles")=":%DB_USER" 
-    set sc = ##class(Security.Applications).Modify(webName, .webProperties) 
-    if sc<1 write $SYSTEM.OBJ.DisplayError(sc) 
+    write "Modifying MDX2JSON application security...",!
+    set webName = "/mdx2json"
+    set webProperties("AutheEnabled") = 64
+    set webProperties("MatchRoles")=":%DB_USER"
+    set sc = ##class(Security.Applications).Modify(webName, .webProperties)
+    if sc<1 write $SYSTEM.OBJ.DisplayError(sc)
 
     halt
