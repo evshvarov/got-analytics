@@ -14,9 +14,9 @@
       },
       "links": {
         "DSW Dashboards": "http://localhost:${port}/dsw/index.html#/USER/",
-        "Dashboards Portal": "http://localhost:${port}/csp/irisapp/_DeepSee.UserPortal.Home.zen",
-        "Analyzer": "http://localhost:${port}/csp/irisapp/_DeepSee.UserPortal.Analyzer.zen",
-        "Architect": "http://localhost:${port}/csp/irisapp/_DeepSee.UI.Architect.zen?$NAMESPACE=IRISAPP"
+        "Dashboards Portal": "http://localhost:${port}/csp/user/_DeepSee.UserPortal.Home.zen",
+        "Analyzer": "http://localhost:${port}/csp/user/_DeepSee.UserPortal.Analyzer.zen",
+        "Architect": "http://localhost:${port}/csp/user/_DeepSee.UI.Architect.zen?$NAMESPACE=IRISAPP"
       },
       "active": true
     },
